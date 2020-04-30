@@ -59,12 +59,79 @@ body {
 
 /* styling text content */
 #content {
-  padding-top: 6px;
+  padding-top: 25px;
   padding-left: 75px;
   padding-right: 16px;
   line-height: 25px;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   font-size: 19px;
-  letter-spacing: 1px;
-  word-spacing: 5px;
+
 }
+
+.plannerRow {
+    height: 75px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1em;
+    line-height: 25px;
+    padding-top: 0px;
+    font-size: 15px;
+
+  }
+
+  .timeBox {
+    /* background-color: rgb(250, 250, 78); */
+    /* color: black;  */
+    width: 15%;
+    font-size:20px;
+    font: bold;
+    position:absolute ;
+    margin-left: 5px;
+    margin-top: 25px;  
+    margin-bottom: 0px;
+    text-align: center;
+    text-size-adjust:12px;
+
+
+  }
+
+  .col-md-1, .col-md-2, .col-md-9 {
+    padding: 0px;
+ 
+  }
+
+  .dailyPlan {
+    /* border: solid .1px black; */
+    font-size: 20px;
+    height:3%;
+    width: 50%;
+    padding-left: 20px;
+    margin-top: 25px;
+    margin-left: 110px;
+    min-width: 50px; 
+    max-width: 75%;
+    position:relative;
+         
+   }
+
+  input {
+    background: transparent;
+    padding-left: 1px;
+    border: none;
+     
+  }
+  .wrapper 
+  { 
+    padding: 0px;     
+  
+  }
+
+  .saveIcon {
+    font-size: 1.5em;
+    width: 20px;
+    height: 20px; 
+    text-align: center;
+    margin-top: 26px;  
+    margin-left: 425px;
+    position: fixed; ;
+  }
