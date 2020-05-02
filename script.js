@@ -95,19 +95,19 @@ $(document).ready(function () {
         let $saveBtn = $("<i>");
         $saveBtn.attr("id", `saveid-${index}`);
         $saveBtn.attr("save-id", index);
-        $saveBtn.attr("class", "far fa-save saveIcon");
+        $saveBtn.attr("class", "far fa-calendar-plus saveIcon");
 
         $rowDiv.prepend($col1SaveDiv);
         $col1SaveDiv.append($saveBtn);
 
-        updateRowColor($rowDiv, hour);
+        changeRowColor($rowDiv, hour);
 
         $plannerDiv.append($rowDiv);
 
     };
-
+    //changes te row color depeding on time 
     // trying to add current time to blink - not working 
-    function updateRowColor($hourRow, hour) {
+    function changeRowColor($hourRow, hour) {
 
         function blink_text() {
             $('.blink').fadeOut(500);
@@ -123,11 +123,11 @@ $(document).ready(function () {
             $hourRow.css('opacity', 0.8);
         } else if (hour > nowHour24) {
             if (timeF) { console.log("greaterthan"); }
-            $hourRow.css("color", "magenta")
+            $hourRow.css("color", "black")
             // $hourRow.css('opacity', 0.9);
         } else {
             if (timeF) { console.log("eqaul"); }
-            // $hourRow.css("color", "green")
+            // for text $hourRow.css("color", "green")
             // $hourRow.css("color", blink_text);
             $hourRow.css("background", "green");
             $hourRow.css('opacity', 0.85);
@@ -135,12 +135,10 @@ $(document).ready(function () {
     };
 
 
-
-
     $(document).on("click", "i", function (event) {
         event.preventDefault();
 
-        if (timeF) { console.log("click pta before" + planTextArr); }
+        if (timeF) { console.log("click planner before" + planTextArr); }
 
         let $index = $(this).attr("save-id");
 
@@ -151,7 +149,7 @@ $(document).ready(function () {
 
         if (timeF) { console.log("value ", $value); }
         if (timeF) { console.log("index ", $index); }
-        if (timeF) { console.log("click pta after " + planTextArr); }
+        if (timeF) { console.log("click planner after" + planTextArr); }
 
         localStorage.setItem("savedInfo", JSON.stringify(planTextArr));
     });
